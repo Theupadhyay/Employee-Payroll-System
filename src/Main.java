@@ -83,9 +83,15 @@ public class Main {
     public static void main(String[] args) {
         PayrollSystem payrollSystem = new PayrollSystem();
         FullTimeEmployee emp1 = new FullTimeEmployee("Abhishek", 01, 100000);
-        PartTimeEmployee emp2 = new PartTimeEmployee("Ashish", 02, 40, 200);
+        PartTimeEmployee emp2 = new PartTimeEmployee("Ashish", 02, 40, 2000);
+
         payrollSystem.addEmployee(emp1);
         payrollSystem.addEmployee(emp2);
-        
+        System.out.println("Initial Employee Details : ");
+        payrollSystem.dispayEmpoyees();
+        System.out.println("Removing Employees");
+        payrollSystem.removeEmployee(02);
+        System.out.println("Remaining Employee Details");
+        payrollSystem.dispayEmpoyees();
     }
 }
